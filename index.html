@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -7,12 +8,17 @@
   <title>The One Page Terminal Manual | Aitor Alejandro</title>
 
   <!-- Google Optimize -->
-  <style>.async-hide { opacity: 0 !important} </style>
-  <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-  h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-  (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-  })(window,document.documentElement,'async-hide','dataLayer',4000,
-  {'GTM-NWNWTNC':true});</script>
+  <style>
+    .async-hide {
+      opacity: 0 !important
+    }
+  </style>
+  <script>(function (a, s, y, n, c, h, i, d, e) {
+      s.className += ' ' + y; h.start = 1 * new Date;
+      h.end = i = function () { s.className = s.className.replace(RegExp(' ?' + y), '') };
+      (a[n] = a[n] || []).hide = h; setTimeout(function () { i(); h.end = null }, c); h.timeout = c;
+    })(window, document.documentElement, 'async-hide', 'dataLayer', 4000,
+      { 'GTM-NWNWTNC': true });</script>
   <!-- End Google Optimize -->
 
   <!-- Google Analytics -->
@@ -30,11 +36,14 @@
   <!-- End Google Analytics -->
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KCQB9MM');</script>
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KCQB9MM');</script>
   <!-- End Google Tag Manager -->
 
   <meta name="description" content="The One Page Terminal Manual: A summary of useful terminal commands">
@@ -51,21 +60,21 @@
   <link rel="stylesheet" href="styles/milligram.min.css">
   <link rel="stylesheet" href="styles/custom.css">
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCQB9MM"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCQB9MM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="page">
     <header class="container">
       <div class="row">
         <div class="column">
-            <h1 class="page-title">The One Page Terminal Manual</h1>
+          <h1 class="page-title">The One Page Terminal Manual</h1>
         </div>
       </div>
       <div class="row">
         <div class="column">
-            <p class="page-summary">A summary of useful terminal commands</p>
+          <p class="page-summary">A summary of useful terminal commands</p>
         </div>
       </div>
     </header>
@@ -76,7 +85,77 @@
             <h2 class="section-title">Starting & Stopping</h2>
             <dl class="command-list">
               <dt><code>shutdown -h now</code></dt>
-              <dd>Shutdown the systems now and don't reboot</dd>
+              <dd>Shutdown the system now and don't reboot</dd>
+              <dt><code>shutdown -r now reboot</code></dt>
+              <dd>Shutdown the system and reboot</dd>
+              <dt><code>shutdown -r 5</code></dt>
+              <dd>Shutdown the system in 5 minutes and reboot</dd>
+              <dt><code>halt</code></dt>
+              <dd>Stop all process</dd>
+            </dl>
+          </section>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <section>
+            <h2 class="section-title">Files</h2>
+            <dl class="command-list">
+              <dt><code>ls -l</code></dt>
+              <dd>List files using long format</dd>
+              <dt><code>ls -al</code></dt>
+              <dd>Formatted listing with hidden files</dd>
+              <dt><code>ls -F</code></dt>
+              <dd>List files indicating the file type</dd>
+              <dt><code>ls -laC</code></dt>
+              <dd>List all files in long format and display in columns</dd>
+              <dt><code>cd dir</code></dt>
+              <dd>Change directory to dir</dd>
+              <dt><code>cd</code></dt>
+              <dd>Change to home</dd>
+              <dt><code>pwd</code></dt>
+              <dd>Print working directory</dd>
+              <dt><code>mkdir</code></dt>
+              <dd>Create directory dir</dd>
+              <dt><code>rm file</code></dt>
+              <dd>Remove file</dd>
+              <dt><code>rm -r dir</code></dt>
+              <dd>Remove directory dir</dd>
+              <dt><code>rm -f file</code></dt>
+              <dd>Force remove file</dd>
+              <dt><code>cp file1 file2</code></dt>
+              <dd>Copy file1 to file2</dd>
+              <dt><code>mv file1 file2</code></dt>
+              <dd>Rename file1 to file2</dd>
+              <dt><code>ln -s file link</code></dt>
+              <dd>Create symbolic link 'link' to file</dd>
+              <dt><code>touch file</code></dt>
+              <dd>Create or update file</dd>
+              <dt><code>cat &gt; file</code></dt>
+              <dd>Place standard input into file</dd>
+              <dt><code>less file</code></dt>
+              <dd>Output the contents of the file</dd>
+              <dt><code>head file</code></dt>
+              <dd>Output first 10 lines of file</dd>
+              <dt><code>tail file</code></dt>
+              <dd>Output last 10 lines of file</dd>
+              <dt><code>tail -f file</code></dt>
+              <dd>Output contents of file as it grows</dd>
+            </dl>
+          </section>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <section>
+            <h2 class="section-title">Ssh</h2>
+            <dl class="command-list">
+              <dt><code>ssh user@host</code></dt>
+              <dd>Connect to host as user</dd>
+              <dt><code>ssh -p port user@host</code></dt>
+              <dd>Connect to host as user using port -p</dd>
+              <dt><code>ssh -D port user@host</code></dt>
+              <dd>Connect and use bind port</dd>
             </dl>
           </section>
         </div>
@@ -85,16 +164,17 @@
     <footer class="container">
       <div class="row">
         <div class="column">
-          <p>versión 1</p>
+          <p>versión 2</p>
         </div>
         <div class="column">
           <p>September 2018</p>
         </div>
         <div class="column">
-          <a href="https://aitoralejandro.github.io">author: Aitor Alejandro</a>
+          <p>author: <a href="https://aitoralejandro.github.io">Aitor Alejandro</a></p>
         </div>
       </div>
     </footer>
   </div>
 </body>
+
 </html>
