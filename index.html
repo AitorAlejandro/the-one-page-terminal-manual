@@ -94,6 +94,10 @@
               <dd>Shutdown the system in 5 minutes and reboot</dd>
               <dt><code>halt</code></dt>
               <dd>Stop all process</dd>
+              <dt><code>Ctrl + c</code></dt>
+              <dd>Halts current command</dd>
+              <dt><code>Ctrl + z</code></dt>
+              <dd>Stops current command</dd>
               <dt><code>date</code></dt>
               <dd>Print the current date/time</dd>
               <dt><code>cal</code></dt>
@@ -118,6 +122,10 @@
               <dd>Human readable size in GB</dd>
               <dt><code>free</code></dt>
               <dd>Show memory and swap usage</dd>
+              <dt><code>!!</code></dt>
+              <dd>Repeat las command</dd>
+              <dt><code>exit</code></dt>
+              <dd>Log out of current session</dd>
             </dl>
           </section>
         </div>
@@ -247,11 +255,68 @@
         </div>
       </div>
 
+      <div class="row">
+        <div class="column">
+          <section>
+            <h2 class="section-title">File permission</h2>
+            <dl class="command-list">
+              <dt><code>chmod octal file</code></dt>
+              <dd>Change permission of file</dd>
+            </dl>
+            <ul>
+              <li>(4) read (r)</li>
+              <li>(2) write (w)</li>
+              <li>(1) execute (x)</li>
+            </ul>
+            <p>Order: owner/group/world</p>
+            <div>
+              <p><code>chmod 777</code> - rwx for everyone</p>
+              <p><code>chmod 755</code> - rwx for owner, rx for group/world</p>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <section>
+            <h2 class="section-title">Compression</h2>
+            <dl class="command-list">
+              <dt><code>tar cf file.tar files</code></dt>
+              <dd>Tar files into file.tar</dd>
+              <dt><code>tar xf file.tar</code></dt>
+              <dd>Untar into current directory</dd>
+              <dt><code>tar tf file.tar</code></dt>
+              <dd>Show content of archive</dd>
+            </dl>
+            <h3>Tar flags:</h3>
+            <ul>
+              <li><code>c</code> - create archive</li>
+              <li><code>t</code> - table of contents</li>
+              <li><code>x</code> - extract</li>
+              <li><code>f</code> - for filename</li>
+              <li><code>z</code> - use zip/gzip</li>
+              <li><code>j</code> - bzip2 compression</li>
+              <li><code>k</code> - do not overwrite</li>
+              <li><code>T</code> - file from files</li>
+              <li><code>w</code> - ask for confirmation</li>
+              <li><code>v</code> - verbose</li>
+            </ul>
+            <dl class="command-list">
+                <dt><code>gzip file</code></dt>
+                <dd>Compress file and rename to file.gz</dd>
+                <dt><code>gzip -d file.gz</code></dt>
+                <dd>decompress file.gz</dd>
+              </dl>
+          </section>
+        </div>
+      </div>
+
     </main>
     <footer class="container">
       <div class="row">
         <div class="column">
-          <p>versión 3</p>
+          <p>versión 4</p>
         </div>
         <div class="column">
           <p>September 2018</p>
