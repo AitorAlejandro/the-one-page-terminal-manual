@@ -82,8 +82,10 @@
       <div class="row">
         <div class="column">
           <section>
-            <h2 class="section-title">Starting & Stopping</h2>
+            <h2 class="section-title">System</h2>
             <dl class="command-list">
+              <dt><code>man command</code></dt>
+              <dd>Show manual for command 'command'</dd>
               <dt><code>shutdown -h now</code></dt>
               <dd>Shutdown the system now and don't reboot</dd>
               <dt><code>shutdown -r now reboot</code></dt>
@@ -92,10 +94,35 @@
               <dd>Shutdown the system in 5 minutes and reboot</dd>
               <dt><code>halt</code></dt>
               <dd>Stop all process</dd>
+              <dt><code>date</code></dt>
+              <dd>Print the current date/time</dd>
+              <dt><code>cal</code></dt>
+              <dd>Show current month calendar</dd>
+              <dt><code>uptime</code></dt>
+              <dd>Show computer uptime</dd>
+              <dt><code>w</code></dt>
+              <dd>Show who is online</dd>
+              <dt><code>whoami</code></dt>
+              <dd>Show who are you logged in as</dd>
+              <dt><code>uname -a</code></dt>
+              <dd>Show kernel config</dd>
+              <dt><code>cat /proc/cpuinfo</code></dt>
+              <dd>Cpu info</dd>
+              <dt><code>cat /proc/meminfo</code></dt>
+              <dd>Memory info</dd>
+              <dt><code>df</code></dt>
+              <dd>Show disk usage</dd>
+              <dt><code>du</code></dt>
+              <dd>Show directory space usage</dd>
+              <dt><code>du -h</code></dt>
+              <dd>Human readable size in GB</dd>
+              <dt><code>free</code></dt>
+              <dd>Show memory and swap usage</dd>
             </dl>
           </section>
         </div>
       </div>
+
       <div class="row">
         <div class="column">
           <section>
@@ -145,6 +172,7 @@
           </section>
         </div>
       </div>
+
       <div class="row">
         <div class="column">
           <section>
@@ -154,17 +182,36 @@
               <dd>Connect to host as user</dd>
               <dt><code>ssh -p port user@host</code></dt>
               <dd>Connect to host as user using port -p</dd>
-              <dt><code>ssh -D port user@host</code></dt>
-              <dd>Connect and use bind port</dd>
             </dl>
           </section>
         </div>
       </div>
+
+      <div class="row">
+        <div class="column">
+          <section>
+            <h2 class="section-title">Network</h2>
+            <dl class="command-list">
+              <dt><code>ping host</code></dt>
+              <dd>Ping host 'host'</dd>
+              <dt><code>whois domain</code></dt>
+              <dd>Get whois for domain</dd>
+              <dt><code>dig domain</code></dt>
+              <dd>Get DNS for domain</dd>
+              <dt><code>wget file</code></dt>
+              <dd>Download file</dd>
+              <dt><code>wget -r url</code></dt>
+              <dd>Download recursively download files from url</dd>
+            </dl>
+          </section>
+        </div>
+      </div>
+
     </main>
     <footer class="container">
       <div class="row">
         <div class="column">
-          <p>versión 2</p>
+          <p>versión 3</p>
         </div>
         <div class="column">
           <p>September 2018</p>
